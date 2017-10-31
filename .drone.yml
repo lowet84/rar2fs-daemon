@@ -2,4 +2,4 @@ pipeline:
   build:
     image: alpine:3.6
     commands:
-      - ls
+      - ls 
