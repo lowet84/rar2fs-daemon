@@ -7,6 +7,7 @@ RUN chmod +x /usr/bin/rar2fs
 ENV TARGET=/rar2fs
 
 VOLUME /data
+VOLUME "$TARGET"
 
 CMD /usr/bin/rar2fs -o allow_other /data $TARGET --seek-length=1 && \
     # make this into a deamon
