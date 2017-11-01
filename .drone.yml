@@ -6,6 +6,7 @@ pipeline:
       - wget --no-check-certificate http://www.rarlab.com/rar/unrarsrc-5.5.8.tar.gz
       - tar zxvf unrarsrc-5.5.8.tar.gz
       - cd unrar
+      - make
       - make install
       - make lib
       - make install-lib
