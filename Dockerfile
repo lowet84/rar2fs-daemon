@@ -6,7 +6,7 @@ RUN chmod +x /rar2fs
 
 ENV TARGET=/rar2fs
 
-VOLUME ["/media", "${TARGET}"]
+VOLUME ["/data", "${TARGET}"]
 
 CMD /rar2fs $dir_source $dir_target && \
     # make this into a deamon
@@ -14,4 +14,4 @@ CMD /rar2fs $dir_source $dir_target && \
     # https://docs.docker.com/engine/quickstart/
     while true; do echo DEAMON; sleep 1; done
 
-# docker run -d -it --privileged --cap-add SYS_ADMIN --device /dev/fuse -v "$PWD/source":/media --name rar2fs <image id>
+# docker run -d -it --privileged --cap-add SYS_ADMIN --device /dev/fuse -v "$PWD/source":/data --name rar2fs <image id>
