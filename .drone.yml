@@ -17,7 +17,8 @@ pipeline:
       - ./configure --with-unrar=../unrar --with-unrar-lib=/usr/lib/
       - make
       - ls
-      
+
   test:
+  image: alpine:3.6
     commands:
       - ./rar2fs
