@@ -19,6 +19,6 @@ pipeline:
       - ls
 
   test:
-  image: alpine:3.6
+    image: alpine:3.6
     commands:
       - ./rar2fs
