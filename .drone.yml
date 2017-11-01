@@ -16,7 +16,7 @@ pipeline:
       - cd rar2fs-1.26.0
       - ./configure --with-unrar=../unrar --with-unrar-lib=/usr/lib/
       - make
-      - ls
+      - mv rar2fs ..
 
   test:
     image: alpine:3.6
