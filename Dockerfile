@@ -1,7 +1,7 @@
 FROM alpine:3.6
 
 ADD rar2fs /usr/bin/rar2fs
-RUN apk add --no-cache fuse libstdc++ && \
+RUN apk add --no-cache libstdc++ && \
     chmod +x /usr/bin/rar2fs && \
     mkdir -p /rar2fs
 
