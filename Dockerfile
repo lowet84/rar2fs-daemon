@@ -9,8 +9,7 @@ ENV dir_target=${TARGET:-/rar2fs}
 
 VOLUME ["$dir_source", "$dir_target"]
 
-CMD umount /rar2fs || { echo "rar2fs folder was not mounted (this is intended)" ; : ; }  && \
-    /usr/bin/rar2fs -o allow_other $dir_source $dir_target --seek-length=1 && \
+CMD /usr/bin/rar2fs -o allow_other $dir_source $dir_target --seek-length=1 && \
     # make this into a deamon
     # see: "Starting a long-running worker process"
     # https://docs.docker.com/engine/quickstart/
