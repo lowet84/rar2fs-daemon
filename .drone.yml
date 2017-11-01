@@ -23,3 +23,11 @@ pipeline:
     commands:
       - apk add --no-cache fuse libstdc++
       - ./rar2fs
+
+  docker:
+    image: plugins/docker
+    repo: lowet84/rar2fs-daemon
+    secrets: [ docker_username, docker_password ]
+    tags: latest
+    when:
+      branch: master
