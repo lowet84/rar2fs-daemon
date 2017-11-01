@@ -17,3 +17,6 @@ pipeline:
       - ./configure --with-unrar=../unrar --with-unrar-lib=/usr/lib/
       - make
       - ls
+    test:
+    commands:
+      - ./rar2fs
