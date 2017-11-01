@@ -21,4 +21,5 @@ pipeline:
   test:
     image: alpine:3.6
     commands:
+      apk add --no-cache fuse libstdc++
       - ./rar2fs
