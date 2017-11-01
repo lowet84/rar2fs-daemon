@@ -2,4 +2,7 @@ pipeline:
   build:
     image: alpine:3.6
     commands:
-      - ls 
+      - apk add --no-cache wget make g++ fuse-dev tar
+      - wget http://www.rarlab.com/rar/unrarsrc-5.5.8.tar.gz
+      - tar zxvf unrarsrc-5.5.8.tar.gz
+      - ls
