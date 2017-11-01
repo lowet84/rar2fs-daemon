@@ -6,9 +6,9 @@ RUN chmod +x /rar2fs
 
 ENV TARGET=/rar2fs
 
-VOLUME ["/data", "${TARGET}"]
+VOLUME /data
 
-CMD /rar2fs $dir_source $dir_target && \
+CMD /rar2fs -o allow_other /data $TARGET --seek-length=1 && \
     # make this into a deamon
     # see: "Starting a long-running worker process"
     # https://docs.docker.com/engine/quickstart/
