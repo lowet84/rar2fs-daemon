@@ -14,5 +14,3 @@ CMD /usr/bin/rar2fs -o allow_other $dir_source $dir_target --seek-length=1 && \
     # see: "Starting a long-running worker process"
     # https://docs.docker.com/engine/quickstart/
     while true; do echo DEAMON; sleep 1; done
-
-# docker run -d -it --privileged --cap-add SYS_ADMIN --device /dev/fuse -v "$PWD/source":/data --name rar2fs <image id>
